@@ -1,0 +1,10 @@
+.DownloadMoviePage{
+    text-align: center;
+    background-color: #1d1d1d;
+    color: white;
+    background-image: url(https://img.yts.mx/assets/images/movies/just_mercy_2019/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:luminosity;
+    height: 100vh;
+}

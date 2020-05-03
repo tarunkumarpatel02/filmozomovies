@@ -1,0 +1,12 @@
+body{
+    /* background-image: url("../assets/images/img2.jpg"); */
+    /* / filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    min-height: 100vh;
+    /* background: linear-gradient(to right, #42b7ce , #6767cf);
+     */
+     background-color: #141414;
+    position: relative;
+    
+}
+
