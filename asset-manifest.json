@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/filmozomovies/static/css/main.244ffb73.chunk.css",
-    "main.js": "/filmozomovies/static/js/main.d4c20c79.chunk.js",
-    "main.js.map": "/filmozomovies/static/js/main.d4c20c79.chunk.js.map",
-    "runtime-main.js": "/filmozomovies/static/js/runtime-main.5338f450.js",
-    "runtime-main.js.map": "/filmozomovies/static/js/runtime-main.5338f450.js.map",
-    "static/css/2.fddaa3a5.chunk.css": "/filmozomovies/static/css/2.fddaa3a5.chunk.css",
-    "static/js/2.7413d510.chunk.js": "/filmozomovies/static/js/2.7413d510.chunk.js",
-    "static/js/2.7413d510.chunk.js.map": "/filmozomovies/static/js/2.7413d510.chunk.js.map",
-    "index.html": "/filmozomovies/index.html",
-    "precache-manifest.6e602737f11606c806a8fe050b133ed8.js": "/filmozomovies/precache-manifest.6e602737f11606c806a8fe050b133ed8.js",
-    "service-worker.js": "/filmozomovies/service-worker.js",
-    "static/css/2.fddaa3a5.chunk.css.map": "/filmozomovies/static/css/2.fddaa3a5.chunk.css.map",
-    "static/css/main.244ffb73.chunk.css.map": "/filmozomovies/static/css/main.244ffb73.chunk.css.map",
-    "static/js/2.7413d510.chunk.js.LICENSE.txt": "/filmozomovies/static/js/2.7413d510.chunk.js.LICENSE.txt",
-    "static/media/LandingPage.css": "/filmozomovies/static/media/circle-cropped.f883bd61.png"
+    "main.css": "./static/css/main.973fea6e.chunk.css",
+    "main.js": "./static/js/main.f68db755.chunk.js",
+    "main.js.map": "./static/js/main.f68db755.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.ae9273ad.js",
+    "runtime-main.js.map": "./static/js/runtime-main.ae9273ad.js.map",
+    "static/css/2.fddaa3a5.chunk.css": "./static/css/2.fddaa3a5.chunk.css",
+    "static/js/2.2ec4fca1.chunk.js": "./static/js/2.2ec4fca1.chunk.js",
+    "static/js/2.2ec4fca1.chunk.js.map": "./static/js/2.2ec4fca1.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.7c1fc9f112b8794747374ea7d80539f3.js": "./precache-manifest.7c1fc9f112b8794747374ea7d80539f3.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.fddaa3a5.chunk.css.map": "./static/css/2.fddaa3a5.chunk.css.map",
+    "static/css/main.973fea6e.chunk.css.map": "./static/css/main.973fea6e.chunk.css.map",
+    "static/js/2.2ec4fca1.chunk.js.LICENSE.txt": "./static/js/2.2ec4fca1.chunk.js.LICENSE.txt",
+    "static/media/LandingPage.css": "./static/media/circle-cropped.f883bd61.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5338f450.js",
+    "static/js/runtime-main.ae9273ad.js",
     "static/css/2.fddaa3a5.chunk.css",
-    "static/js/2.7413d510.chunk.js",
-    "static/css/main.244ffb73.chunk.css",
-    "static/js/main.d4c20c79.chunk.js"
+    "static/js/2.2ec4fca1.chunk.js",
+    "static/css/main.973fea6e.chunk.css",
+    "static/js/main.f68db755.chunk.js"
   ]
 }
