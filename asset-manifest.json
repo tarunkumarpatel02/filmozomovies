@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.1cbfadc0.chunk.css",
-    "main.js": "/static/js/main.9443711e.chunk.js",
-    "main.js.map": "/static/js/main.9443711e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7d22ae22.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7d22ae22.js.map",
-    "static/css/2.fddaa3a5.chunk.css": "/static/css/2.fddaa3a5.chunk.css",
-    "static/js/2.993bab03.chunk.js": "/static/js/2.993bab03.chunk.js",
-    "static/js/2.993bab03.chunk.js.map": "/static/js/2.993bab03.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.d73f44418e0c6f169d2d60523067ff64.js": "/precache-manifest.d73f44418e0c6f169d2d60523067ff64.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.fddaa3a5.chunk.css.map": "/static/css/2.fddaa3a5.chunk.css.map",
-    "static/css/main.1cbfadc0.chunk.css.map": "/static/css/main.1cbfadc0.chunk.css.map",
-    "static/js/2.993bab03.chunk.js.LICENSE.txt": "/static/js/2.993bab03.chunk.js.LICENSE.txt",
-    "static/media/LandingPage.css": "/static/media/circle-cropped.f883bd61.png"
+    "main.css": "/filmozomovies/static/css/main.244ffb73.chunk.css",
+    "main.js": "/filmozomovies/static/js/main.95131305.chunk.js",
+    "main.js.map": "/filmozomovies/static/js/main.95131305.chunk.js.map",
+    "runtime-main.js": "/filmozomovies/static/js/runtime-main.5338f450.js",
+    "runtime-main.js.map": "/filmozomovies/static/js/runtime-main.5338f450.js.map",
+    "static/css/2.fddaa3a5.chunk.css": "/filmozomovies/static/css/2.fddaa3a5.chunk.css",
+    "static/js/2.7413d510.chunk.js": "/filmozomovies/static/js/2.7413d510.chunk.js",
+    "static/js/2.7413d510.chunk.js.map": "/filmozomovies/static/js/2.7413d510.chunk.js.map",
+    "index.html": "/filmozomovies/index.html",
+    "precache-manifest.95594aa8cc04a8a11aaa7fa0004b635f.js": "/filmozomovies/precache-manifest.95594aa8cc04a8a11aaa7fa0004b635f.js",
+    "service-worker.js": "/filmozomovies/service-worker.js",
+    "static/css/2.fddaa3a5.chunk.css.map": "/filmozomovies/static/css/2.fddaa3a5.chunk.css.map",
+    "static/css/main.244ffb73.chunk.css.map": "/filmozomovies/static/css/main.244ffb73.chunk.css.map",
+    "static/js/2.7413d510.chunk.js.LICENSE.txt": "/filmozomovies/static/js/2.7413d510.chunk.js.LICENSE.txt",
+    "static/media/LandingPage.css": "/filmozomovies/static/media/circle-cropped.f883bd61.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d22ae22.js",
+    "static/js/runtime-main.5338f450.js",
     "static/css/2.fddaa3a5.chunk.css",
-    "static/js/2.993bab03.chunk.js",
-    "static/css/main.1cbfadc0.chunk.css",
-    "static/js/main.9443711e.chunk.js"
+    "static/js/2.7413d510.chunk.js",
+    "static/css/main.244ffb73.chunk.css",
+    "static/js/main.95131305.chunk.js"
   ]
 }
