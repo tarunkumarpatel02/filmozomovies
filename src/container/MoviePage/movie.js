@@ -12,7 +12,7 @@ const movies = (props) =>{
     
    return(
        <div className='movieBlock'>  
-              <img onMouseEnter={props.zoomIn} onMouseLeave={props.zoomOut}  src={props.Poster}/>
+              <img onMouseEnter={window.innerWidth>992?props.zoomIn:null} onMouseLeave={window.innerWidth>992?props.zoomOut:null}  src={props.Poster}/>
               {/* <img   src={props.Poster}/> */}
        </div>
    );

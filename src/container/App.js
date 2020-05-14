@@ -8,6 +8,9 @@ import Header from '../container/header';
 import axios from 'axios';
 import Search from '../container/search';
 import ReactDOM from 'react-dom';
+import { Parallax } from 'react-scroll-parallax';
+import Mobile from '../hoc/Mobile';
+import Desktop from '../hoc/desktop';
 
 class App extends Component {
 
@@ -22,7 +25,10 @@ class App extends Component {
     Imdb:[1,2,3,4,5,6,7,8,9,10],
     name:'',
     activeItemIndex: 0,
+    windowWidth :window.innerWidth
   }
+
+
 
   zoomIn=(e)=>{
     // e.target.style.transform= "scale(1.4)";
@@ -42,6 +48,9 @@ class App extends Component {
     //   elem.style.transform= "translateX(20%)";
     // });
      e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "scale(1.5)";//uncomment this only
+    //  e.target.closest(".rec.rec-swipable-carouselHvr").style.transitionDelay=" 0.5s";
+    //  e.target.closest(".rec.rec-swipable-carouselHvr").style.transition=" all 300ms linear;";
+    //  e.target.closest(".rec.rec-slider").style.transitionDelay=" 0.5s";
     // e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "translateX(-20%)";
     // e.target.style.transform= "scale(1.4)"
     // e.target.closest('.rec.rec-item-wrapper').style.width="350px";
@@ -57,6 +66,9 @@ zoomOut=(e)=>{
     elem.style.transform= "translateX(0%)";
   });
   e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "scale(1)";//uncomment this only
+  // e.target.closest(".rec.rec-swipable-carouselHvr").style.transitionDelay=" 0.2s";
+  // e.target.closest(".rec.rec-swipable-carouselHvr").style.transition=" all 300ms linear;";
+  // e.target.closest(".rec.rec-slider").style.transitionDelay=" 0.2s";
   // e.target.closest(".rec.rec-swipable-carouselHvr").style.paddingTop="0px";//uncomment this only
   // e.target.closest(".rec.rec-swipable-carouselHvr").style.padding="0px 0px";
   // e.target.closest(".rec.rec-swipable-carouselHvr").style.width="252.45px";
@@ -78,7 +90,7 @@ zoomOut=(e)=>{
   componentWillMount(){
     let fetchedOrders = [];
     console.log(this.state.genre);
-    axios.get("https://www.omdbapi.com/?s=man&apikey=e0a527f0").then(response=>{
+    axios.get("https://www.omdbapi.com/?s=man&apikey=e0a527f0&page=1-100").then(response=>{
       console.log(response)
       for(let key in response.data.Search){
         fetchedOrders.push(response.data.Search[key]);
@@ -100,11 +112,12 @@ zoomOut=(e)=>{
     )
   }
 
-  nameChangeHandler=(event)=>{
-    this.setState({name:event.target.value});// funcion called everytime on change the value of the search bar
+  nameChangeHandler=(event)=>{ // funcion executes everytime on change in the value of the search bar and updates the state variable
+    this.setState({name:event.target.value});
+    
   }
   
-  searchHandler=(event)=>{//function for searching user entered values
+  searchHandler=(event)=>{  //function for searching user entered values.
     var searchTerm = '';
     if(event.target.text&&event.target.text !==''){
         searchTerm = event.target.text;
@@ -123,10 +136,36 @@ zoomOut=(e)=>{
         this.setState({movieBlock:fetchedOrders})
     }
     )
+    this.toggleSideMenuHandler();
+  }
+
+  loadHomepageHandler=()=>{ //function runs on clicking the logo shown on the header.Navigates the user back to the homepage.*/
+      this.props.history.replace("/");
+  }
+
+  searchHandlerOnEnterHandler=(event)=>{ //for searching on pressing enter key
+    if(event.key==="Enter"){
+      this.searchHandler(event);
+    }
+  }
+
+  toggleSideMenuHandler=()=>{
+    // var sideMenu = e.target.closest("#mySidenav")
+    var mobileArea = document.querySelector(".mainContainerMobile");
+
+    if(document.querySelector("#mySidenav").style.width==="250px"){
+    	document.querySelector("#mySidenav").style.width = "0px";
+    }else{
+    	document.querySelector("#mySidenav").style.width = "250px";
+    }
+    mobileArea.addEventListener("click", function(e){
+      document.querySelector("#mySidenav").style.width = "0px";
+    })
   }
   render(){
      return(
       <div className="container-fluid mainApp">
+        <BrowserRouter>
         <div className="row form-group">
           <div className="col-sm-12 col-md-12 header">
             <Header nameChangeHandler={this.nameChangeHandler}
@@ -134,26 +173,47 @@ zoomOut=(e)=>{
               searchHandler={this.searchHandler}
               name={this.state.name}
               source={'../assets/images/logo.png'}
-              imdb={this.state.Imdb}/>
+              imdb={this.state.Imdb}
+              loadHomepage={this.loadHomepageHandler}
+              searchHandlerOnEnter={this.searchHandlerOnEnterHandler}
+              toggleSideMenu={this.toggleSideMenuHandler}/>
           </div>
         </div>
-          <BrowserRouter>
               <Switch>
-                  <Route path="/" exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
-                  <Route path='/:title' component={DownloadMoviePage}/>
-              </Switch>
-          </BrowserRouter>
-          <div className="row footer">
-          <div className="col-sm-12 col-md-12">
-              <div className="brand-logo"></div>
-              <ul>
-                <li><a>Terms and Privacy Notice</a></li>
-                <li><a>Send us feedback</a></li>
-                <li><a>Help</a></li>
-                <li>© 2020, Filmozo.com</li>
-              </ul>
-          </div>
-        </div>
+                  {/* <Route path="/" exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
+                  <Route path='/:title' component={DownloadMoviePage}/> */}
+                  <Route path={process.env.PUBLIC_URL + '/'} exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
+                  <Route path={'/:title'} component={DownloadMoviePage}/> 
+              </Switch> 
+
+              <Desktop>
+                <div className="row footer">
+                  <div className="col-sm-12 col-md-12">
+                      <div className="brand-logo"></div>
+                      <ul>
+                        <li><a>Terms and Privacy Notice</a></li>
+                        <li><a>Send us feedback</a></li>
+                        <li><a>Help</a></li>
+                        <li>© 2020, Filmozo.com</li>
+                      </ul>
+                  </div>
+                </div>
+              </Desktop>
+              <Mobile>
+                <div className="row Mobilefooter">
+                  <div className="col-sm-12 col-md-12">
+                      <div className="brand-logo"></div>
+                      <ul>
+                        <li><a>Terms and Privacy Notice</a></li>
+                        <li><a>Send us feedback</a></li>
+                        <li><a>Help</a></li>
+                        <li>© 2020, Filmozo.com</li>
+                      </ul>
+                  </div>
+                </div>
+              </Mobile>
+          
+        </BrowserRouter>
       </div>
     )
   }

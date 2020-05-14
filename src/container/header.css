@@ -2,8 +2,7 @@
     /* background: rgb(154,0,67);
     background: radial-gradient(circle, rgba(154,0,67,1) 0%, rgba(13,53,101,1) 100%); */
     background-color:#141414;
-    height:55px;
-    color: #636ccf;
+    color: #e5e5e5;
     position: fixed;
     /* border-bottom:0.5px solid lightgray; */
     z-index: 10;
@@ -11,9 +10,18 @@
     right: 0;
     left: 0;
     top:0;
-    margin-bottom: 65px;
+    /* margin-bottom: 65px; */
     padding-left: 17px;
     padding-right:17px;
+}
+
+.headerMobile{
+    height:50px;
+    margin-bottom: 0px !important;
+}
+
+.headerDesktop{
+    /* margin-bottom:65px; */
 }
 
 /* #3c29a352 */

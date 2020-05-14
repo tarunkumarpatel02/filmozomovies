@@ -7,10 +7,13 @@ import './index.css';
 import App from '../src/container/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 ReactDOM.render(
+<ParallaxProvider>
   <BrowserRouter>
      <App />
-  </BrowserRouter>,
+  </BrowserRouter>
+  </ParallaxProvider>,
   document.getElementById('root')
 );
 
