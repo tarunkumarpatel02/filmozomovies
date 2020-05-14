@@ -9,12 +9,11 @@ class DownloadMoviePage extends Component{
     }
 
     componentWillMount(){
-    //    let  URLParam=window.location.hash.slice(1);
-    //     this.setState({image:URLParam});
+        console.log(this.props.location.hash.slice(1));
     }
 
     componentDidMount(){
-        console.log(this.props.movieBlock);
+        console.log(this.props.location.hash.slice(1));
     }
     render(){
         return(

@@ -68,7 +68,7 @@ class LandingPage extends Component {
       this.props.movieBlock.map(elem=>(
         // use browser history method to remove hash from the url
         <Link className ="hvr" to={{
-                  pathname:'/'+elem.Title,
+                  pathname:process.env.PUBLIC_URL +'/'+elem.Title,
                   hash:elem.Poster,
                   key:elem.imdbID}}>
         <Movies 
@@ -166,12 +166,12 @@ class LandingPage extends Component {
             </Desktop>
             <Mobile>
               <div className="row form-group mainContainerMobile" style={{paddingTop:"12vw"}}>
-                <div className="col-xs-12" style={{fontSize:"1.2em",fontWeight:"bold",color:"white",color:"#818181"}}>Popular on Filmozo</div>
-                <div className="col-xs-12" style={{zIndex:"1", marginBottom:"46px", paddingRight:"5vw", paddingLeft:"5vw"}}>
+                <div className="col-xs-12" style={{fontSize:"1.2em",fontWeight:"bold",color:"white",color:"#818181",paddingLeft:"6vw"}}>Popular on Filmozo</div>
+                <div className="col-xs-12" style={{zIndex:"1", marginBottom:"40px", paddingRight:"5vw", paddingLeft:"6vw"}}>
                   {carouselMovieList} 
                 </div>  
-                <div className="col-xs-12" style={{fontSize:"1.2em",fontWeight:"bold",color:"white",marginTop:"-30px",color:"#818181"}}>Trending Now</div>
-                <div className="col-xs-12" style={{zIndex:"1", paddingRight:"5vw", paddingLeft:"5vw"}}>
+                <div className="col-xs-12" style={{fontSize:"1.2em",fontWeight:"bold",color:"white",color:"#818181",paddingLeft:"6vw"}}>Trending Now</div>
+                <div className="col-xs-12" style={{zIndex:"1", paddingRight:"5vw", paddingLeft:"6vw"}}>
                   {carouselMovieList2} 
                 </div> 
               </div>

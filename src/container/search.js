@@ -17,7 +17,7 @@ import Mobile from '../hoc/Mobile';
 
 const search =(props)=>{
     var genreList=props.genrelist.map(elem=>(
-        <tr key={elem}>
+        <tr key={elem} onClick={props.toggleSideMenu}>
             <td><a href="#"  onClick={props.searchHandler}>{elem}</a></td>
         </tr>
         ));

@@ -136,7 +136,7 @@ zoomOut=(e)=>{
         this.setState({movieBlock:fetchedOrders})
     }
     )
-    this.toggleSideMenuHandler();
+    // this.toggleSideMenuHandler();
   }
 
   loadHomepageHandler=()=>{ //function runs on clicking the logo shown on the header.Navigates the user back to the homepage.*/
@@ -151,16 +151,16 @@ zoomOut=(e)=>{
 
   toggleSideMenuHandler=()=>{
     // var sideMenu = e.target.closest("#mySidenav")
-    var mobileArea = document.querySelector(".mainContainerMobile");
+    // var mobileArea = document.querySelector("body");
 
     if(document.querySelector("#mySidenav").style.width==="250px"){
     	document.querySelector("#mySidenav").style.width = "0px";
     }else{
     	document.querySelector("#mySidenav").style.width = "250px";
     }
-    mobileArea.addEventListener("click", function(e){
-      document.querySelector("#mySidenav").style.width = "0px";
-    })
+    // mobileArea.addEventListener("click", function(e){
+    //   document.querySelector("#mySidenav").style.width = "0px";
+    // })
   }
   render(){
      return(
@@ -183,7 +183,7 @@ zoomOut=(e)=>{
                   {/* <Route path="/" exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
                   <Route path='/:title' component={DownloadMoviePage}/> */}
                   <Route path={process.env.PUBLIC_URL + '/'} exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
-                  <Route path={'/:title'} component={DownloadMoviePage}/> 
+                  <Route path={process.env.PUBLIC_URL +'/:title'} component={DownloadMoviePage}/> 
               </Switch> 
 
               <Desktop>
