@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5f366df74d90e879a076d8468ae0b63",
+    "revision": "748d8fb00d3a81f38d48023a8e533d5c",
     "url": "/filmozomovies/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/filmozomovies/static/css/2.5d87000d.chunk.css"
   },
   {
-    "revision": "a1da164b9a3b9b1d2417",
+    "revision": "e9be24f55a14165a94de",
     "url": "/filmozomovies/static/css/main.c8e03176.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/filmozomovies/static/js/2.7448e85c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a1da164b9a3b9b1d2417",
-    "url": "/filmozomovies/static/js/main.2bd3ea36.chunk.js"
+    "revision": "e9be24f55a14165a94de",
+    "url": "/filmozomovies/static/js/main.f1611f49.chunk.js"
   },
   {
     "revision": "0177c401b34e12f790d5",
