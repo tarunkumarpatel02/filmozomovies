@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/filmozomovies/static/css/main.c8e03176.chunk.css",
-    "main.js": "/filmozomovies/static/js/main.f1611f49.chunk.js",
-    "main.js.map": "/filmozomovies/static/js/main.f1611f49.chunk.js.map",
+    "main.js": "/filmozomovies/static/js/main.59014fea.chunk.js",
+    "main.js.map": "/filmozomovies/static/js/main.59014fea.chunk.js.map",
     "runtime-main.js": "/filmozomovies/static/js/runtime-main.5338f450.js",
     "runtime-main.js.map": "/filmozomovies/static/js/runtime-main.5338f450.js.map",
     "static/css/2.5d87000d.chunk.css": "/filmozomovies/static/css/2.5d87000d.chunk.css",
     "static/js/2.7448e85c.chunk.js": "/filmozomovies/static/js/2.7448e85c.chunk.js",
     "static/js/2.7448e85c.chunk.js.map": "/filmozomovies/static/js/2.7448e85c.chunk.js.map",
     "index.html": "/filmozomovies/index.html",
-    "precache-manifest.fba62f7fdb97b1769c27c297c8380943.js": "/filmozomovies/precache-manifest.fba62f7fdb97b1769c27c297c8380943.js",
+    "precache-manifest.a81f362468099bc712bb708534d79833.js": "/filmozomovies/precache-manifest.a81f362468099bc712bb708534d79833.js",
     "service-worker.js": "/filmozomovies/service-worker.js",
     "static/css/2.5d87000d.chunk.css.map": "/filmozomovies/static/css/2.5d87000d.chunk.css.map",
     "static/css/main.c8e03176.chunk.css.map": "/filmozomovies/static/css/main.c8e03176.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.5d87000d.chunk.css",
     "static/js/2.7448e85c.chunk.js",
     "static/css/main.c8e03176.chunk.css",
-    "static/js/main.f1611f49.chunk.js"
+    "static/js/main.59014fea.chunk.js"
   ]
 }
