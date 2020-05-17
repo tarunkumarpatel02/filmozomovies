@@ -8,9 +8,10 @@ import App from '../src/container/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
+
 ReactDOM.render(
-<ParallaxProvider>
-  <BrowserRouter>
+<ParallaxProvider >
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
      <App />
   </BrowserRouter>
   </ParallaxProvider>,

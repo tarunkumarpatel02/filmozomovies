@@ -18,6 +18,18 @@
 .headerMobile{
     height:50px;
     margin-bottom: 0px !important;
+    background-color:#141414;
+    color: #e5e5e5;
+    position: fixed;
+    /* border-bottom:0.5px solid lightgray; */
+    z-index: 10;
+    width:100%;
+    right: 0;
+    left: 0;
+    top:0;
+    /* margin-bottom: 65px; */
+    padding-left: 5vw;
+    padding-right:5vw;
 }
 
 .headerDesktop{

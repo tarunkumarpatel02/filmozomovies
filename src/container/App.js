@@ -151,70 +151,151 @@ zoomOut=(e)=>{
 
   toggleSideMenuHandler=()=>{
     // var sideMenu = e.target.closest("#mySidenav")
-    // var mobileArea = document.querySelector("body");
+    var mobileArea = document.querySelector(".mainContainerMobile");
+    var mobileAreaFooter = document.querySelector(".Mobilefooter");
+
+    
 
     if(document.querySelector("#mySidenav").style.width==="250px"){
     	document.querySelector("#mySidenav").style.width = "0px";
     }else{
     	document.querySelector("#mySidenav").style.width = "250px";
     }
-    // mobileArea.addEventListener("click", function(e){
-    //   document.querySelector("#mySidenav").style.width = "0px";
-    // })
+    if(document.querySelector("#mySidenav").style.width==="250px"){
+      mobileArea.addEventListener("click", function(e){
+        document.querySelector("#mySidenav").style.width = "0px";
+      })
+
+      mobileAreaFooter.addEventListener("click", function(e){
+        document.querySelector("#mySidenav").style.width = "0px";
+      })
+    }
+   
   }
   render(){
      return(
-      <div className="container-fluid mainApp">
-        <BrowserRouter>
-        <div className="row form-group">
-          <div className="col-sm-12 col-md-12 header">
-            <Header nameChangeHandler={this.nameChangeHandler}
-              genre ={this.state.genre}
-              searchHandler={this.searchHandler}
-              name={this.state.name}
-              source={'../assets/images/logo.png'}
-              imdb={this.state.Imdb}
-              loadHomepage={this.loadHomepageHandler}
-              searchHandlerOnEnter={this.searchHandlerOnEnterHandler}
-              toggleSideMenu={this.toggleSideMenuHandler}/>
-          </div>
-        </div>
-              <Switch>
-                  {/* <Route path="/" exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
-                  <Route path='/:title' component={DownloadMoviePage}/> */}
-                  <Route path={process.env.PUBLIC_URL + '/'} exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
-                  <Route path={process.env.PUBLIC_URL +'/:title'} component={DownloadMoviePage}/> 
-              </Switch> 
+      // <div className="container-fluid mainApp">
+      //   {/* <BrowserRouter> */}
+      //   <div className="row form-group">
+      //     <div className="col-sm-12 col-md-12 header">
+      //       <Header nameChangeHandler={this.nameChangeHandler}
+      //         genre ={this.state.genre}
+      //         searchHandler={this.searchHandler}
+      //         name={this.state.name}
+      //         source={'../assets/images/logo.png'}
+      //         imdb={this.state.Imdb}
+      //         loadHomepage={this.loadHomepageHandler}
+      //         searchHandlerOnEnter={this.searchHandlerOnEnterHandler}
+      //         toggleSideMenu={this.toggleSideMenuHandler}/>
+      //     </div>
+      //   </div>
+      //         <Switch>
+      //             {/* <Route path="/" exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
+      //             <Route path='/:title' component={DownloadMoviePage}/> */}
+      //             <Route path={ '/'} exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
+      //             <Route path={'/:title'} component={DownloadMoviePage}/> 
+      //             <Route  render={()=><h1>Not Found</h1>}/>
+      //             {/* <Route render={()=><h1>Not Found</h1>} */}
+      //         </Switch> 
 
-              <Desktop>
-                <div className="row footer">
-                  <div className="col-sm-12 col-md-12">
-                      <div className="brand-logo"></div>
-                      <ul>
-                        <li><a>Terms and Privacy Notice</a></li>
-                        <li><a>Send us feedback</a></li>
-                        <li><a>Help</a></li>
-                        <li>© 2020, Filmozo.com</li>
-                      </ul>
-                  </div>
-                </div>
-              </Desktop>
-              <Mobile>
-                <div className="row Mobilefooter">
-                  <div className="col-sm-12 col-md-12">
-                      <div className="brand-logo"></div>
-                      <ul>
-                        <li><a>Terms and Privacy Notice</a></li>
-                        <li><a>Send us feedback</a></li>
-                        <li><a>Help</a></li>
-                        <li>© 2020, Filmozo.com</li>
-                      </ul>
-                  </div>
-                </div>
-              </Mobile>
+      //         <Desktop>
+      //           <div className="row footer">
+      //             <div className="col-sm-12 col-md-12">
+      //                 <div className="brand-logo"></div>
+      //                 <ul>
+      //                   <li><a>Terms and Privacy Notice</a></li>
+      //                   <li><a>Send us feedback</a></li>
+      //                   <li><a>Help</a></li>
+      //                   <li>© 2020, Filmozo.com</li>
+      //                 </ul>
+      //             </div>
+      //           </div>
+      //         </Desktop>
+      //         <Mobile>
+      //           <div className="row Mobilefooter">
+      //             <div className="col-sm-12 col-md-12">
+      //                 <div className="brand-logo"></div>
+      //                 <ul>
+      //                   <li><a>Terms and Privacy Notice</a></li>
+      //                   <li><a>Send us feedback</a></li>
+      //                   <li><a>Help</a></li>
+      //                   <li>© 2020, Filmozo.com</li>
+      //                 </ul>
+      //             </div>
+      //           </div>
+      //         </Mobile>
           
-        </BrowserRouter>
-      </div>
+      //   {/* </BrowserRouter> */}
+      // </div>
+      <div>
+        <Desktop>
+          <div className="container-fluid mainApp">
+            <div className="row form-group">
+              <div className="col-sm-12 col-md-12 header">
+                <Header nameChangeHandler={this.nameChangeHandler}
+                  genre ={this.state.genre}
+                  searchHandler={this.searchHandler}
+                  name={this.state.name}
+                  source={'../assets/images/logo.png'}
+                  imdb={this.state.Imdb}
+                  loadHomepage={this.loadHomepageHandler}
+                  searchHandlerOnEnter={this.searchHandlerOnEnterHandler}
+                  toggleSideMenu={this.toggleSideMenuHandler}/>
+              </div>
+             </div>
+            <Switch>
+              <Route path={ '/'} exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
+              <Route path={'/:title'} component={DownloadMoviePage}/> 
+              <Route  render={()=><h1>Not Found</h1>}/>
+            </Switch> 
+              <div className="row footer">
+                <div className="col-sm-12 col-md-12">
+                    <div className="brand-logo"></div>
+                    <ul>
+                      <li><a>Terms and Privacy Notice</a></li>
+                      <li><a>Send us feedback</a></li>
+                      <li><a>Help</a></li>
+                      <li>© 2020, Filmozo.com</li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+          </Desktop>
+
+        <Mobile>
+         <div className="container-fluid MobilemainApp">
+            <div className="row form-group" style={{height:"50px"}}>
+              <div className="col-sm-12 col-md-12 headerMobile">
+                <Header nameChangeHandler={this.nameChangeHandler}
+                  genre ={this.state.genre}
+                  searchHandler={this.searchHandler}
+                  name={this.state.name}
+                  source={'../assets/images/logo.png'}
+                  imdb={this.state.Imdb}
+                  loadHomepage={this.loadHomepageHandler}
+                  searchHandlerOnEnter={this.searchHandlerOnEnterHandler}
+                  toggleSideMenu={this.toggleSideMenuHandler}/>
+              </div>
+            </div>
+            <Switch>
+              <Route path={ '/'} exact render={()=><LandingPage zoomOut={this.zoomOut} zoomIn={this.zoomIn} movieBlock={this.state.movieBlock} movieBlock2={this.state.movieBlock2}/>}/>
+              <Route path={'/:title'} component={DownloadMoviePage}/> 
+              <Route  render={()=><h1>Not Found</h1>}/>
+            </Switch> 
+            <div className="row Mobilefooter">
+              <div className="col-sm-12 col-md-12">
+                  <div className="brand-logo"></div>
+                  <ul>
+                    <li><a>Terms and Privacy Notice</a></li>
+                    <li><a>Send us feedback</a></li>
+                    <li><a>Help</a></li>
+                    <li>© 2020, Filmozo.com</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </Mobile>
+      </div> 
     )
   }
 }

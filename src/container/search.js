@@ -56,7 +56,7 @@ const search =(props)=>{
             <div className="col-md-6 headerSearchLeft">
                 <div className="col-md-5 logo">
                    <Link  to={{
-                        pathname:process.env.PUBLIC_URL + '/'}}>
+                        pathname:'/'}}>
                         <img src={myImage} height="50" className="logoImg"/>  
                    </Link>  
                 </div>
@@ -90,7 +90,7 @@ const search =(props)=>{
                             <td style={{paddingLeft:"5vw"}}>
                                 <img style={{height:"7vw",width:"7vw",marginRight:"2vw"}} onClick={props.toggleSideMenu} src={"https://assets.nflxext.com/ffe/siteui/akira/fallback/hamburger.gif"}></img>
                                 <Link  to={{
-                                    pathname:process.env.PUBLIC_URL + '/'}}>
+                                    pathname:'/'}}>
                                     <img src={myImage} height="50" className="logoImgMbl"/>  
                                 </Link> 
                             </td>

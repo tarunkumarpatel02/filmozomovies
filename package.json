@@ -1,5 +1,6 @@
 {
   "homepage": "https://tarunkumarpatel02.github.io/filmozomovies/",
+  "proxy": "https://tarunkumarpatel02.github.io/filmozomovies/",
   "name": "gomovie",
   "version": "0.1.0",
   "private": true,

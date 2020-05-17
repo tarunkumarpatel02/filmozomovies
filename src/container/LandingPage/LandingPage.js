@@ -68,7 +68,7 @@ class LandingPage extends Component {
       this.props.movieBlock.map(elem=>(
         // use browser history method to remove hash from the url
         <Link className ="hvr" to={{
-                  pathname:process.env.PUBLIC_URL +'/'+elem.Title,
+                  pathname:elem.Title,
                   hash:elem.Poster,
                   key:elem.imdbID}}>
         <Movies 
@@ -87,7 +87,7 @@ class LandingPage extends Component {
       this.props.movieBlock2.map(elem=>(
         // use browser history method to remove hash from the url
         <Link className ="hvr" to={{
-                  pathname:process.env.PUBLIC_URL +'/'+elem.Title,
+                  pathname:elem.Title,
                   hash:elem.Poster,
                   key:elem.imdbID}} >
         <Movies 
@@ -165,7 +165,7 @@ class LandingPage extends Component {
               </div>
             </Desktop>
             <Mobile>
-              <div className="row form-group mainContainerMobile" style={{paddingTop:"12vw"}}>
+              <div className="row form-group mainContainerMobile" /*style={{paddingTop:"12vw"}}*/>
                 <div className="col-xs-12" style={{fontSize:"1.2em",fontWeight:"bold",color:"white",color:"#818181",paddingLeft:"6vw"}}>Popular on Filmozo</div>
                 <div className="col-xs-12" style={{zIndex:"1", marginBottom:"40px", paddingRight:"5vw", paddingLeft:"6vw"}}>
                   {carouselMovieList} 

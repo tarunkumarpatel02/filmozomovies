@@ -9,7 +9,7 @@ const header = (props)=>{
     return(
         <div>
             <Desktop>
-                <header className ="headerDesktop">
+                <header>
                     <Search genrelist={props.genre} 
                     imdb={props.imdb}
                     nameChangeHandler={props.nameChangeHandler}
