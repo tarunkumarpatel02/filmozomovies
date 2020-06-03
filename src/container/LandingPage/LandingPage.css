@@ -1,13 +1,29 @@
 .movie{
     display: flex;
     height:auto;
-    margin-top: -50px;
+    /* margin-top: -50px; */
+    margin-top: -59.13px;
     z-index:1;
     
 }
 
+@media only screen and (min-width: 1600px) {
+  .rec.rec-slider{
+    /* height:378px;   */
+    /* height:57.53vh;   */
+  }
+
+  .rec.rec-swipable-carouselHvr{
+    /* padding-top: 64px;
+     padding-bottom: 60px; */
+     padding-top: 9.74vh;
+     /* padding-bottom: 9.74vh; */
+     text-align: center;
+  } 
+}
  .rec.rec-slider-container{
   margin: 0px -20px;
+  /* margin: 0px -1.46px; */
 
 }
 
@@ -19,33 +35,45 @@
 .gaaBdk{ 
   min-width:20px !important;
   border-radius:0% !important;
+  z-index: 4;
+  background: none;
 } 
 
+.gaaBdk:hover{ 
+  background: none !important;
+}
 .rec.rec-swipable-carouselHvr{
-  padding-top: 60px;
-   padding-bottom: 60px;
+  /* padding-top: 64px;
+   padding-bottom: 60px; */
+   padding-top: 9.74vh;
+   padding-bottom: 9.74vh;
 } 
 
   .rec.rec-slider{
-    height:370px;  
+    /* height:378px;   */
+    /* height:57.53vh;   */
   }
   
   .rec.rec-swipable-carouselHvr{
     /* transition: all 300ms linear 100ms; */
-    transition-duration: 500ms;
+    transition:  transform 500ms;
+    /* transition-delay:500ms; */
+    /* transition: transform-origin 500ms; */
+    /* transform-origin:left; */
+
   }
   .rec.rec-item-wrapper{
     /* transition: all 300ms linear; */
-    transition-duration: 500ms;
+    /* transition-duration: 500ms; */
   }
 
   .rec.rec-carousel{
     /* transition: transform 300ms ease 100ms; */
-    transition-duration: 500ms;
+    /* transition-duration: 500ms; */
   }
   .rec.rec-carousel{
     /* transition: all 300ms linear; */
-    transition-duration: 500ms;
+    /* transition-duration: 500ms; */
     
   }
 
@@ -62,8 +90,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     text-indent: -9999px;
-    width: 107px;
-    height: 32px;
+    /* width: 107px;
+    height: 32px; */
+    width: 7.83vw;
+    height: 4.87vh;
     vertical-align: bottom;
     top: 0;
   }
@@ -176,4 +206,19 @@
   
     .mainContainerMobile{
       min-height: 130vw;
+      padding-top: 6.5rem;
+      background-color: #1d1d1d;
     }
+    @media only screen and (max-width: 768px) {
+      .brand-logo{
+        background-image: url(../../assets/images/circle-cropped.png);
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-indent: -9999px;
+        width: 107px;
+        height: 32px;
+        vertical-align: bottom;
+        top: 0;
+      }
+  }

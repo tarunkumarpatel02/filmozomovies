@@ -1,0 +1,23 @@
+
+img{
+    /* height:250px; */
+    /* width:168.91px; */
+    height:250px;
+    width:168.91px;
+    /* width:250px;
+    height:372.5px; */
+    flex: 0 0 19.7%;
+    transition: transform 300ms ease 100ms;
+    /* transition-delay: 0.5s */
+    /* box-shadow:5px 5px lightslategrey; */
+}
+
+
+
+/* .mobileCarousel>.rec.rec-carousel>.rec.rec-slider-container>.rec.rec-slider>.rec.rec-swipable-carouselHvrMbl>.rec.rec-item-wrapper>div>.movieBlock>img{
+    height:230px !important;
+    width:155.91px !important;
+   
+ } */
+
+ 

@@ -1,10 +1,101 @@
 .DownloadMoviePage{
-    text-align: center;
+   
     background-color: #1d1d1d;
     color: white;
-    background-image: url(https://img.yts.mx/assets/images/movies/just_mercy_2019/background.jpg);
+    /* background-image: url(https://img.yts.mx/assets/images/movies/just_mercy_2019/background.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode:luminosity;
     height: 100vh;
+    margin-top: 7vh;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    padding-top: 2vw;
 }
+
+
+.fullMovie{
+    width:100%;
+    height:64vh;
+    object-fit:fill;
+}
+
+@media only screen and (max-width: 768px) {
+    .fullMovie{
+        height: 33.05vh;
+        width: 100%;
+        object-fit:fill;
+    }
+
+    .DownloadMoviePage{
+   
+        background-color: #1d1d1d;
+        color: white;
+        /* background-image: url(https://img.yts.mx/assets/images/movies/just_mercy_2019/background.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode:luminosity;
+        height: 100vh;
+        margin-top: 7vh;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        padding-left: 1.7vw;
+        padding-right: 1.5vw;
+        padding-top: 2vw;
+    }
+
+    .plotMobile{
+        margin-top: 1vh;
+        margin-bottom:1vh;
+        min-height: 15vh;
+    }
+
+    .castMobile{
+        padding-left: 0px;
+        padding-right: 0px;
+        left: -17px;
+    }
+
+    .castMobile1{
+        padding-left: 0px;
+        padding-right: 0px;
+        color: #757ab3;
+    }
+
+    .castImgMobile{
+        width: 69px;
+        height: 88px;
+        margin-right: 10px; 
+    }
+    
+}
+
+.table>tbody>tr>td{
+    border: none;
+}
+
+.table>tbody>tr{
+    line-height: 0em;
+}
+
+.castImg{
+    width:89px;
+    height:114px;
+    margin-right: 10px;
+}
+
+.plotArea{
+    height:63.92vh;
+}
+
+.plot{
+    height: 12.18vh;
+   
+}
+
+/* .tableCast{
+    cell:0;
+    cellspacing:0
+} */

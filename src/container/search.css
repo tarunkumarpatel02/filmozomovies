@@ -28,7 +28,7 @@
 }
 
 .headerSearchRight,.headerSearchLeft{
-    padding-top: 2px;
+    padding-top: 6px;
 }
 
 /* .headerSearchLeft{
@@ -75,8 +75,26 @@
 
 .dropdownList{
     padding-top: 12px;
-    left:-127px;
+    left:-9.54vw;
 }
+
+@media only screen and (min-width: 1600px) {
+    .dropdownList{
+        padding-top: 12px;
+        left:-12.54vw;
+    }
+    .userProfile{
+        display:flex;
+        align-items: center;
+        left:1.77vw;
+        padding-top: 10px;
+        color: #e5e5e5;
+    }
+    .textSearch{
+        padding-top: 7px;
+        padding-left: 22.08vw;
+    }
+  }
 
 .logoImgMbl{
     width:95px;

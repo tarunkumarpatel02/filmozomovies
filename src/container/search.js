@@ -14,11 +14,14 @@ import {Route, Link} from 'react-router-dom';
 import Desktop from '../hoc/desktop';
 import Tablet from '../hoc/Tablet';
 import Mobile from '../hoc/Mobile';
+import LargeScreen from '../hoc/LargeScreen';
 
 const search =(props)=>{
     var genreList=props.genrelist.map(elem=>(
-        <tr key={elem} onClick={props.toggleSideMenu}>
-            <td><a href="#"  onClick={props.searchHandler}>{elem}</a></td>
+        <tr key={elem} >
+            {/* <td><a href="#"  onClick={props.searchHandler}>{elem}</a></td> */}
+            <td><Link to={{
+                        pathname:'/'}} onClick={props.searchHandler}>{elem}</Link></td>
         </tr>
         ));
 
@@ -52,6 +55,38 @@ const search =(props)=>{
                         
                 </div>
             </nav> */}
+
+            <LargeScreen>
+                <div className="col-md-6 headerSearchLeft">
+                    <div className="col-md-5 logo">
+                    <Link  to={{
+                            pathname:'/'}}>
+                            <img src={myImage} height="50" className="logoImg"/>  
+                    </Link>  
+                    </div>
+                    <div className="col-md-7 dropdownList ">
+                        <Dropdown clicked={props.searchHandler} genre={props.genrelist} imdb={props.imdb}/>
+                    </div>
+                    
+                </div>
+                <div className="col-md-6 headerSearchRight">
+                    <div className="col-md-10 textSearch">
+                        <Paper className="paper">
+                        <InputBase placeholder="Search Movies"  variant="outlined" label="search movies" value={props.name}
+                        className="inputBase" id="outlined-warning" style={{ fontSize: 15 }} onChange={props.nameChangeHandler} onKeyDown={props.searchHandlerOnEnter} ></InputBase>
+                            <IconButton type="submit"  className="iconButton" aria-label="search" onClick={props.searchHandler} >
+                                <SearchIcon style={{ fontSize: 30,color:"#41bbce" }} />
+                            </IconButton>
+                        </Paper>
+                    </div>
+                    <div className="col-md-2 userProfile">
+                    
+                    <div><AccountCircleIcon style={{ fontSize: 30, color:"#e5e5e5" }}/> </div>
+                    <div className="userName">Tarun</div>
+                    </div>    
+                </div>
+            </LargeScreen>
+
             <Desktop>
             <div className="col-md-6 headerSearchLeft">
                 <div className="col-md-5 logo">
@@ -63,7 +98,6 @@ const search =(props)=>{
                 <div className="col-md-7 dropdownList ">
                     <Dropdown clicked={props.searchHandler} genre={props.genrelist} imdb={props.imdb}/>
                 </div>
-                
             </div>
             <div className="col-md-6 headerSearchRight">
                 <div className="col-md-10 textSearch">
@@ -94,7 +128,7 @@ const search =(props)=>{
                                     <img src={myImage} height="50" className="logoImgMbl"/>  
                                 </Link> 
                             </td>
-                            <td style={{paddingRight:"5vw"}}>
+                            <td style={{paddingRight:"5vw",paddingTop:"2.5vw"}}>
                             <Paper className="paperMobile">
                                 <InputBase placeholder="Search" style={{ height: "8.5vw",fontSize: 15,paddingLeft:"1vw" }}  variant="outlined" label="search movies" value={props.name}
                                 id="outlined-warning"  onChange={props.nameChangeHandler} onKeyDown={props.searchHandlerOnEnter} ></InputBase>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useMediaQuery } from "react-responsive";
 
 const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
+    const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 991 });
     return isTablet ? children : null;
   };
 
