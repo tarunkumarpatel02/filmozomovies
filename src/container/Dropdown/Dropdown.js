@@ -15,13 +15,13 @@ const Dropdown = (props)=>{
     // <div className="searchDropdown">
        <ul className=" searchDropdown nav nav-pills">
             <li>
-            <span className=" dropdown-toggle" style={{fontWeight:"700",fontSize:"16px", overflow:"hidden",marginRight:"16px",cursor:"default"}} data-toggle="dropdown">Genre</span>
+            <span className=" dropdown-toggle" style={{fontWeight:"700",fontSize:"16px", overflow:"hidden",marginRight:"1.1713vw",cursor:"default"}} data-toggle="dropdown">Genre</span>
                 <ul className="dropdown-menu">
                     {genreList}
                 </ul>
              </li>
              <li >
-            <span className=" dropdown-toggle"  style={{fontWeight:"700",fontSize:"16px",cursor:"default",marginRight:"16px"}}  data-toggle="dropdown">Imdb</span>
+            <span className=" dropdown-toggle"  style={{fontWeight:"700",fontSize:"16px",cursor:"default",marginRight:"1.1713vw"}}  data-toggle="dropdown">Imdb</span>
                 <ul className="dropdown-menu">
                     {imdb}
                 </ul>

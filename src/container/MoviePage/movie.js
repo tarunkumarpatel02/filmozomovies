@@ -15,7 +15,7 @@ const movies = (props) =>{
    
     
    return(
-       <div className='movieBlock' style={{position: "relative"}} onMouseEnter={window.innerWidth>992?props.zoomIn:null} onMouseLeave={window.innerWidth>992?props.zoomOut:null} >  
+       <div className='movieBlock'  style={{position: "relative"}} onMouseEnter={window.innerWidth>992?props.zoomIn:null} onMouseLeave={window.innerWidth>992?props.zoomOut:null} >  
               <img className=".img"  src={props.Poster}/>
               {/* <IconButton className="playCircle"  type="submit" style={{fontSize:45, position: "absolute",top: "40%",left: "50px",display:"none"}}  aria-label="search" onClick={props.playTrailer} >
                  <PlayCircleFilledWhiteIcon style={{fontSize:35}}   title={"Play Trailer"}></PlayCircleFilledWhiteIcon> 
@@ -30,7 +30,7 @@ const movies = (props) =>{
               <video className='trailerVideo' style={{position: "absolute"}}   poster={props.Poster} loop   autoPlay muted >
                 <source src={Trailer} type='video/mp4'></source>
                
-                {/* <Link className="watchMovie" style={{display:"none",fontSize: 15,position: "absolute",top: "90%",left: "24.5%",color:"white"}} to={{
+                {/* <Link className="watchMovieOnVideo" style={{fontSize: 15,position: "absolute",top: "0%",left: "0%",color:"white"}} to={{
                   pathname:props.Title,
                   hash:props.Poster,
                   key:props.imdbID}}>
@@ -40,7 +40,7 @@ const movies = (props) =>{
 
               
               <Desktop>
-                <Link className="watchMovie" style={{display:"none",fontSize: 15,position: "absolute",top: "66%",left:"3vw",color:"white"}} to={{
+                <Link className="watchMovie" style={{textDecoration:"none", display:"none",fontSize: 15,position: "absolute",top: "90%",left:"3vw",color:"white",resize:"none"}} to={{
                   pathname:props.Title,
                   key:props.imdbID}}>
                     Watch Movie
@@ -48,7 +48,7 @@ const movies = (props) =>{
               </Desktop>
 
               <LargeScreen>
-                  <Link className="watchMovie" style={{display:"none",fontSize: 15,position: "absolute",top: "65%",left:"3.3vw",color:"white"}} to={{
+                  <Link className="watchMovie" style={{display:"none",fontSize: 15,position: "absolute",top: "90%",left:"3.3vw",color:"white",zIndex:"10",fontStretch:"condensed"}} to={{
                     pathname:props.Title,
                     key:props.imdbID}}>
                       Watch Movie

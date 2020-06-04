@@ -4,7 +4,7 @@ import axios from 'axios';
 import Mobile from '../../hoc/Mobile';
 import Desktop from '../../hoc/desktop';
 import LargeScreen from '../../hoc/LargeScreen';
-import Trailer from '../../assets/trailers/ironMan.mp4';
+import Trailer from '../../assets/trailers/thor.mp4';
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
 import ReactPlayer from 'react-player'
@@ -36,7 +36,7 @@ class DownloadMoviePage extends Component{
             <div className = "DownloadMoviePage">
                 <LargeScreen>
                 <div className="col-sm-8">
-                            <video className="fullMovie" poster={this.props.location.hash.slice(1)} loop controls  autoPlay >
+                            <video className="fullMovie" poster={this.props.location.hash.slice(1)} loop controls >
                                 <source src={Trailer} controls type='video/mp4'></source>
                             </video> 
                         </div>
@@ -73,7 +73,7 @@ class DownloadMoviePage extends Component{
                 <Desktop>
                     {/* <div className="row"> */}
                         <div className="col-sm-8">
-                            <video className="fullMovie" poster={this.props.location.hash.slice(1)} loop controls  autoPlay >
+                            <video className="fullMovie" poster={this.props.location.hash.slice(1)} loop controls >
                                 <source src={Trailer} controls type='video/mp4'></source>
                             </video> 
                         </div>
@@ -110,7 +110,7 @@ class DownloadMoviePage extends Component{
                 </Desktop>
                 <Mobile>
                     <div className="col-xs-12">
-                        <video className="fullMovie" poster={this.props.location.hash.slice(1)} loop controls  autoPlay>
+                        <video className="fullMovie" poster={this.props.location.hash.slice(1)} loop controls>
                             <source src={Trailer} controls type='video/mp4'></source>
                         </video> 
                         {/* <ReactPlayer

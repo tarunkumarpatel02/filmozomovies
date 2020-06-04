@@ -192,7 +192,7 @@ class App extends Component {
         e.target.closest(".movieBlock").querySelector('img').style.display="none";
         e.target.closest(".movieBlock").querySelector('video').style.display="block";
         e.target.closest(".movieBlock").querySelector('.playCircle').style.display="none";
-      
+        // e.target.closest(".movieBlock").querySelector('.watchMovie').style.display="none";
         // e.target.closest(".movieBlock").querySelector('.watchMovie').style.zIndex="6";
           this.state.playTrailer=!this.state.playTrailer;
       }
