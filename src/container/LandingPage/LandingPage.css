@@ -180,7 +180,7 @@
 
   
     .Mobilefooter{
-      position: absolute;
+      /* position: absolute; */
       line-height: 20px;
       text-align: center;
       display: inline-block;
