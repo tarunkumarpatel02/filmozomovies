@@ -112,7 +112,7 @@ class App extends Component {
       e.target.closest(".rec.rec-swipable-carouselHvr").style.transformOrigin= "right";//uncomment this onlytransform-origin: left;
       if(e.target.closest(".rec.rec-swipable-carouselHvr").style.transformOrigin=== "right center"){
         for(var i=[...sliderContents].indexOf(e.target.closest(".rec.rec-swipable-carouselHvr"))-1;i>=0;i--){
-          [...sliderContents][i].style.transform= "translateX(-50%)";
+          [...sliderContents][i].style.transform= "translateX(-45%)";
         }
         // e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "scale3d(1.5,1.5,1.5)";//uncomment this onlytransform-origin: left;
         e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "transitionDelay(2s)";//uncomment this onlytransform-origin: left;
@@ -152,10 +152,10 @@ class App extends Component {
       console.log("e.target.closest('.rec.rec-swipable-carouselHvr').getBoundingClientRect().right"+e.target.closest(".rec.rec-swipable-carouselHvr").getBoundingClientRect().right);
      if(e.target){
      [...sliderContents].map(elem=>{
-        elem.style.transform= "translateX(-25%)";
+        elem.style.transform= "translateX(-22.5%)";
       });
       for(var i=[...sliderContents].indexOf(e.target.closest(".rec.rec-swipable-carouselHvr"))+1;i<[...sliderContents].length;i++){
-        [...sliderContents][i].style.transform= "translateX(25%)";
+        [...sliderContents][i].style.transform= "translateX(22.5%)";
       }
     } 
       // e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "scale3d(2,2,1)";//uncomment this only
@@ -165,8 +165,6 @@ class App extends Component {
       // e.target.closest(".movieBlock").style.opacity="0.2";
       e.target.closest(".movieBlock").querySelector('.playCircle').style.display="block";
       e.target.closest(".movieBlock").querySelector('.watchMovie').style.display="block";
-      e.target.closest(".movieBlock").querySelector('.playCircle').style.zIndex="5";
-      e.target.closest(".movieBlock").querySelector('.watchMovie').style.zIndex="5";
      
       // e.target.closest(".movieBlock").querySelector('img').style.display="none";
       // e.target.closest(".movieBlock").querySelector('video').style.display="block";
@@ -178,14 +176,14 @@ class App extends Component {
           if(window.innerWidth>1600){
             [...sliderContents][i].style.transform= "translateX(-150%)";
             }else{
-              [...sliderContents][i].style.transform= "translateX(-140%)";
+              [...sliderContents][i].style.transform= "translateX(-137.5%)";
             }
         }
         for(var i=[...sliderContents].indexOf(e.target.closest(".rec.rec-swipable-carouselHvr"))+1;i<[...sliderContents].length;i++){
           if(window.innerWidth>1600){
             [...sliderContents][i].style.transform= "translateX(150%)";
             }else{
-              [...sliderContents][i].style.transform= "translateX(140%)";
+              [...sliderContents][i].style.transform= "translateX(137.5%)";
             }
         }
         e.target.closest(".rec.rec-swipable-carouselHvr").style.transform= "scale3d(3.94,1.5,1)";
